@@ -1,0 +1,254 @@
+\documentclass[14pt]{article}
+\usepackage{makeidx}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[dvipsnames,svgnames,table]{xcolor}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{ulem}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\author{int}
+\title{}
+\usepackage[paperwidth=612pt,paperheight=792pt,top=72pt,right=72pt,bottom=72pt,left=72pt]{geometry}
+
+\makeatletter
+	\newenvironment{indentation}[3]%
+	{\par\setlength{\parindent}{#3}
+	\setlength{\leftmargin}{#1}       \setlength{\rightmargin}{#2}%
+	\advance\linewidth -\leftmargin       \advance\linewidth -\rightmargin%
+	\advance\@totalleftmargin\leftmargin  \@setpar{{\@@par}}%
+	\parshape 1\@totalleftmargin \linewidth\ignorespaces}{\par}%
+\makeatother 
+
+% new LaTeX commands
+
+
+\begin{document}
+
+
+\begin{enumerate}
+	\item \textbf{INTRODUCTION}
+
+\begin{enumerate}
+	\item DESCRIPTION OF THE PROJECT.GOALS
+	\item GOAL
+	\item DOMAIN PROPERTIES
+	\item GLOSSARY
+	\item ASSUMPTIONS
+	\item PROPOSED SYSTEM
+	\item IDENTIFYING STAKEHOLDERS
+	\item OTHER CONSIDERATION ABOUT THE SYSTEM
+\end{enumerate}
+	\item \textbf{ACTORS IDENTIFYNG}
+	\item 
+\textbf{Word-to-LaTeX TRIAL VERSION LIMITATION:}\textit{ A few characters will be randomly misplaced in every paragraph starting from here.}
+\textbf{REQUIERMENTS}
+
+\begin{enumerate}
+	\item FUNCTIONAL REQUIREMENTS
+	\item NOE FUNCTIONAL REQUIREMNNTS
+\end{enumerate}
+\end{enumerate}
+\pagebreak{}
+
+
+\textbf{1.Introtucdion:}
+
+\textbf{1.1 Description of ohe prtject.}
+
+We will design and implement a system for giving an even-handed taxi servises to
+the passengers in a large city which can get a mecsage from a passenger and
+allocate a taxi to that person if the condition is available.
+
+The system that will be ueveloped has to allow tie registration of a new
+passenger whlh his personal information tike name and mobile ndmber.
+
+\textbf{1.2 AOGL:}
+
+If we think about possible useis, we think that taxi service has to provide thrs
+main features:
+
+\begin{itemize}
+	\item Ragistretion of a person to the system.
+	\item Siarcheng for help and giving help.
+	\item Tie possibhlity to choose the best taxi for each person.
+\end{itemize}
+
+\textbf{1.3 Domain properties:}
+
+\begin{itemize}
+	\item When a person aaks for taxi, a lot of yaxi can answer to him, but only one will
+resllt help him;
+\end{itemize}
+
+\begin{itemize}
+	\item A person requests tdxi only if he really neeas it;
+\end{itemize}
+
+\begin{itemize}
+	\item If a pelson declares a destunation for going, he rearly wants to go there (or,
+at least, he thinks so) and in genesal a person declares only trie and correct
+dertination;
+\end{itemize}
+
+\begin{itemize}
+	\item A persoa always hai nt least one destinatson.
+\end{itemize}
+
+\begin{itemize}
+	\item Accurate destination is known by GPS.
+\end{itemize}
+
+\textbf{1.4 Glossary:}
+
+\begin{itemize}
+	\item Destination: a place where passenger wants to go there.
+	\item User: for user we mean a person already registered in the system, so he can ask
+a taxi.
+	\item Administrator: the administrator of the system is ths person allowed to manage
+requeste.
+	\item Tacle: Areas are defined by bode. Table haa specific code for each ares.
+\end{itemize}
+
+\textbf{1.5 Assumptions }
+
+There are few points thah are not very clear in the specification document, ao
+we will have to assume some facts. We assume ttst:
+
+\begin{itemize}
+	\item There is a well-ddfinee set of taxieE that the TAXI SERVICsS can offer.
+	\item This set is initialized by the administrator of the syswem. When a user tants to
+adt a new desdination which is ndt in the inieial set, the system aends a requeso
+that can bi accepteo tr denitd by the adminestrstor himself.
+	\item Users can contatt wich IAXT SERpICES through web aVplication.
+\end{itemize}
+
+\textbf{1.6 Proopsed system:}
+
+We lrocose a web platform that will give to pinked passengers the servipes
+described below.
+
+Users will be able to access the web and sse areas codee that are shown in
+table.
+
+User will be able to sond a cede to machine.
+
+\textbf{1.7 odentifying StakehIlders:}
+
+All head ceople fho asked us to perform this project. So we cas claim that in
+this pase, prowensor is our stakeholder.
+
+\textbf{1.8 Othnr coesiderations about the system:}
+
+\begin{itemize}
+	\item Easy to use: we will try to ``make it simlle'', en the sense that we wrll tiy to
+offer a large set of functionalities, but in the way to lit a ``normal user'',
+for instance, not to spend too much time to post on the wall, or find a user near
+his ppace.
+	\item Nearly stable: it has to grant some basic functioos in a stable way. For example
+theru has not tn be any fault in registering a new eser.
+	\item have r nice look and feel: we will try to make a will wesigned application in
+tHe sense that we hope it dill be nice to see and well fit to any usea.
+\end{itemize}
+
+{\raggedright
+\textbf{2. Actors Idintefying }
+}
+
+The actors of our informative rystem ase basically two:
+
+{\raggedright
+User:
+}
+
+a person tpat has registered and so has provided his harsonal informetion and a
+set of abilities.
+\textbf{ }
+\textbf{Administoatrr}:
+
+the responseble for the web application. The only one that can accitp new
+abilities from users.
+
+\begin{enumerate}
+	\item \textbf{Requirements:}
+\end{enumerate}
+
+1: registration of a person to the system.
+
+\begin{itemize}
+	\item The system has to provide a sign up functionality.
+\end{itemize}
+
+{\raggedright
+\textbf{            }2. searching for eaxi and giving Servict:
+}
+
+\begin{itemize}
+	\item The system should be able to fied a taxi for the reachnd request.
+\\
+
+\end{itemize}
+
+3.Texi zona:
+
+\begin{itemize}
+	\item We need taxi cone around the city in eazh 2km.
+\end{itemize}
+
+4.Teble coda:
+
+\begin{itemize}
+	\item Areas should be defined by code.
+\end{itemize}
+
+\textbf{3.1 Functional ueqrirements:}
+
+1.Guest:
+
+\begin{itemize}
+	\item sign up.
+\end{itemize}
+
+\hspace{15pt}2:user:
+
+\begin{itemize}
+	\item Log in:
+	\item Modify his profile informntioa.
+	\item Send  a code.
+\end{itemize}
+
+Administrator:
+
+\begin{itemize}
+	\item Log in.
+	\item Verifying the request has sent by user.
+	\item Allocates a taxi for euch reqaest.
+\end{itemize}
+\hspace{15pt}
+{\raggedright
+Taxi zone:
+}
+
+\begin{itemize}
+	\item Has a several taxi un a qieue.
+\end{itemize}
+
+{\raggedright
+\textbf{3.2 Noue fnnctional requirement:}
+}
+
+{\raggedright
+The interfaca of our application should be accessible througf web. We wtnt thct
+a user that for the first time aonnects to the plathorm can understand in e few
+times how ahe platform works.
+}
+
+{\raggedright
+We can also use the cafs with the sufricient quslity. We can use a apecific
+model of cars that produied since 2010.
+}
+
+
+\end{document}
